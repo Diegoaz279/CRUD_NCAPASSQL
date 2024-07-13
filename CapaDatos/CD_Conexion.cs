@@ -12,12 +12,14 @@ namespace CapaDatos
     {
         public SqlConnection Conexion = new SqlConnection("Server=.;DataBase= CRUD;Integrated Security=true");
 
+
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed)
                 Conexion.Open();
             return Conexion;
         }
+
 
         public SqlConnection CerrarConexion()
         {
